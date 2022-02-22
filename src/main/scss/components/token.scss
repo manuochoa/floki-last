@@ -1,0 +1,279 @@
+/*-------- Token --------*/
+
+.token {
+    padding: 100px 0;
+    background-color: #78CECE;
+    position: relative;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        z-index: 2;
+        position: relative;
+    }
+
+    &__title {
+        width: 100%;
+        margin-bottom: 84px;
+        text-align: center;
+    }
+
+    &__list {
+        width: 40%;
+    }
+
+    &__item:not(:first-child) {
+        margin-top: 40px;
+    }
+
+    &__item-title {
+        font-family: $font-rounded-bold;
+        font-size: 26px;
+    }
+
+    &__item-text {
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    &__chart-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: calc(60% - 140px);
+        margin-left: 140px;
+
+        position: relative;
+    }
+
+    &__chart {
+        z-index: 2;
+    }
+
+    &__image {
+        width: 53%;
+
+        position: absolute;
+        top: 30.5%;
+        left: 23%;
+
+        z-index: 1;
+    }
+
+    &__labels {
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+        margin-top: 72px;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__label:before {
+        content: "";
+
+        width: 20px;
+        height: 20px;
+
+        border: 6px solid currentColor;
+        border-radius: 50%;
+
+        transition: filter 0.3s ease-out,
+    }
+
+    &__label.active:before {
+        filter: brightness(120%);
+    }
+
+    &__label.active &__label-title {
+        text-decoration: underline;
+    }
+
+    &__label:not(:first-child) {
+        margin-left: 32px;
+    }
+
+    &__label-column {
+        margin-left: 16px;
+    }
+
+    &__label-title {
+        font-family: $font-b;
+        font-size: 20px;
+        color: $black;
+    }
+
+    &__label-value {
+        margin-top: 6px;
+        color: $black;
+    }
+
+    &__desc-wrapper {
+        width: 100%;
+        padding-top: 32px;
+        margin-top: 32px;
+
+        border-top: 2px solid $black;
+    }
+
+    &__desc {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    &__background {
+        width: 100%;
+
+        position: absolute;
+        left: 0;
+        z-index: 1;
+
+        pointer-events: none;
+        user-select: none;
+    }
+
+    &__background--1 {
+        top: 0;
+    }
+
+    &__background--2 {
+        bottom: 0;
+    }
+}
+
+@media (max-width: 989px) {
+
+    .token {
+
+        &__list {
+            width: 52%;
+        }
+
+        &__chart-wrapper {
+            width: calc(48% - 30px);
+            margin-left: 30px;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .token {
+        padding: 60px 0;
+
+        &__list {
+            width: 100%;
+        }
+
+        &__chart-wrapper {
+            width: 100%;
+            max-width: 348px;
+
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+        }
+
+        &__labels {
+            margin-top: 30px;
+        }
+
+        &__desc-wrapper {
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+
+        &__label:not(:first-child) {
+            margin-left: 20px;
+        }
+
+        &__label-column {
+            margin-left: 10px;
+        }
+
+        &__label:before {
+            width: 16px;
+            height: 16px;
+        }
+
+        &__label-title {
+            font-size: 16px;
+        }
+
+        &__label-value {
+            margin-top: 4px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 619px) {
+
+    .token {
+        overflow: hidden;
+
+        &__labels {
+            flex-wrap: wrap;
+
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__label {
+            width: 48%;
+        }
+
+        &__label:not(:first-child) {
+            margin-left: 0;
+        }
+
+        &__label:nth-child(n+3) {
+            margin-top: 10px;
+        }
+
+        &__background {
+            width: auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@media (max-width: 479px) {
+
+    .token {
+
+        &__item-title {
+            font-size: 20px;
+        }
+
+        &__item-text {
+            font-size: 16px;
+        }
+
+        &__item:not(:first-child) {
+            margin-top: 30px;
+        }
+
+        &__desc {
+            font-size: 14px;
+        }
+    }
+}

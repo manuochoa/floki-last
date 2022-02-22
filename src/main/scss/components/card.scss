@@ -1,0 +1,109 @@
+/*-------- Card --------*/
+
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards-list {
+
+    &--roadmap {
+        justify-content: space-between;
+    }
+
+    &--roadmap &__item {
+        width: calc(25% - 14px);
+    }
+}
+
+.card {
+
+    &--roadmap {
+        height: 100%;
+        padding: 8px;
+
+        background-color: $yellow;
+        border-radius: 24px;
+        border: 2px solid #000000;
+    }
+
+    &--roadmap &__wrapper {
+        height: 100%;
+        padding: 40px 16px;
+
+        background: #F9EDCA;
+        border-radius: 16px;
+        border: inherit;
+    }
+
+    &--roadmap &__title {
+        font-family: $font-rounded-bold;
+        color: $red;
+        font-size: 26px;
+    }
+
+    &--roadmap &__list {
+        margin-top: 20px;
+    }
+
+    &--roadmap &__list-item {   
+        display: flex;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    &--roadmap &__list-item:before {
+        content: "·";
+
+        margin-right: 10px;
+
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: 900;
+    }
+}
+
+@media (max-width: 1099px) {
+
+    .card {
+
+        &--roadmap &__wrapper {
+            padding: 20px 16px;
+        }
+    }
+}
+
+@media (max-width: 989px) {
+
+    .cards-list {
+
+        &--roadmap {
+            overflow: auto;
+            flex-wrap: nowrap;
+            padding-bottom: 20px;
+        }
+
+        &--roadmap &__item {
+            width: 276px;
+            flex-shrink: 0;
+        }
+
+        &--roadmap &__item:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 619px) {
+
+    .cards-list {
+
+        &--roadmap {
+            padding-top: 20px;
+        }
+
+        &--roadmap &__item:not(:first-child) {
+            margin-left: 10px;
+        }
+    }
+}
