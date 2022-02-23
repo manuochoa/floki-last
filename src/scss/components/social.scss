@@ -1,6 +1,6 @@
-/*-------- Social --------*/
+/*-------- Social1 --------*/
 
-.social {
+.social1 {
   display: flex;
 
   &__item:not(:first-child) {
@@ -25,7 +25,7 @@
   }
 }
 
-.social {
+.social1 {
   &--footer &__icon {
     color: $beige;
   }
@@ -36,7 +36,7 @@
 }
 
 @media (max-width: 1219px) {
-  .social {
+  .social1 {
     &__item:not(:first-child) {
       margin-left: 20px;
     }
@@ -44,7 +44,7 @@
 }
 
 @media (max-width: 989px) {
-  .social {
+  .social1 {
     position: absolute;
     left: 20px;
   }

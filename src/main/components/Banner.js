@@ -22,6 +22,9 @@ export default function Banner({ refProp }) {
           <HashLink smooth to="#mint-box" className="button banner__button">
             MINTING
           </HashLink>
+          {/* <a href="#mint-box" className="button banner__button">
+            
+          </a> */}
         </div>
       </div>
       <div className="banner__column banner__column--2">

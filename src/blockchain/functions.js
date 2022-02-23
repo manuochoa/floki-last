@@ -5,7 +5,8 @@ import Metadata from "./newMeta.json";
 import axios from "axios";
 
 let provider = new ethers.providers.JsonRpcProvider(
-  "https://speedy-nodes-nyc.moralis.io/1d19a6082204e3ecd8dcf0b9/bsc/mainnet"
+  "https://bsc-dataseed1.ninicoin.io/"
+  // "https://speedy-nodes-nyc.moralis.io/1d19a6082204e3ecd8dcf0b9/bsc/mainnet"
 );
 let marketAddress = "0xF1e945eF6B918eA3741C2309Ac9475edC1e03Af5";
 let NFTAddress = "0x5F5C8AbD50051e4F8d8325368c79A754F9E9bbC8";

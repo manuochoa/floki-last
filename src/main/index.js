@@ -8,9 +8,9 @@ import Minting from "./components/Product/Product";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import { useRef } from "react";
-import addToRefs from "./services/addToRefs";
 import "./fonts/stylesheet.css";
 import "./scss/style.scss";
+import addToRefs from "./components/services/addToRefs";
 
 export default function App() {
   const sections = useRef([]);

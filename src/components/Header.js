@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import logo from "../images/logo.png";
 import Social from "./common/Social";
 import Menu from "./common/Menu";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 
 export default function Header({
   userAddress,
@@ -34,16 +34,16 @@ export default function Header({
     location.pathname !== "/" && (
       <header className="header">
         <div className="header__wrapper container">
-          <a href="/" className="logo header__logo">
+          <Link to="/" className="logo header__logo">
             <img src={logo} className="logo__icon" alt="logo" />
-          </a>
+          </Link>
           <div
             className={"header__columns" + (menuOpened ? " opened" : "")}
             ref={menu}
           >
-            <Menu className="menu--header" />
+            <Menu className="menu--header1" />
             <div className="header__column">
-              <Social className="social--header" />
+              <Social className="social--header1" />
               <button
                 onClick={userAddress ? disconnectWallet : connectWallet}
                 className="button button--header header__button"
